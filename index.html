@@ -1339,7 +1339,7 @@
   localStorage.setItem('loans', JSON.stringify(loans));
   // Envío a Sheets (bulk, simple y robusto)
   try {
-    await fetch('https://script.google.com/macros/s/AKfycby1Hdv1nXKEBVeSGjW931GMH6sJrpTeg8Qw7sz1i9nt_4_4yGQlQkwsxWvIwd8uygk9/exec', {
+ await fetch(API_URL, {
       method: 'POST',
       // Sugerido para evitar preflight en algunos navegadores móviles
       // (también sirve application/json si prefieres)
